@@ -8,4 +8,25 @@
 // you get the amount required in a year.
 // And that will enable you to get farms required.)
 public class Q25 {
+    public static void main(String[] args) {
+
+        // Total milk required = 0.5 liters of milk per day * 10 Lakh people
+        double totalMilkInDay = 1000000 * 0.5;
+
+        // Number of cows required to produce the total milk required per day
+        double cowsRequired = totalMilkInDay / 15;
+
+        // Fodder required for all cows per day
+        double fodderRequiredPerDay = cowsRequired * 6;
+
+        // Total fodder required in a year (multiply by 365)
+        double fodderRequiredPerYear = fodderRequiredPerDay * 365;
+
+        // Farms required to produce the total fodder (1 farm produces 200 kg of fodder per year)
+        double farmsRequired = fodderRequiredPerYear / 200;
+
+        // Output the result
+        System.out.println("Number of farms required: " + Math.ceil(farmsRequired));
+
+    }
 }
